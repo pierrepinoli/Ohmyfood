@@ -1,0 +1,43 @@
+// RESET CSS//
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+}
+
+// GENERAL//
+
+// Variables police//
+
+$font-title: 'shrikhand';
+$font-text: 'roboto';
+
+// Variables couleurs//
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+
+@import './_partials/header.scss';
+@import './_partials/main.scss';
+@import './_partials/restaurants.scss';
+
+
+
+
+
+
+
+
+
+
