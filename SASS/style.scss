@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  
 }
 
 body {
@@ -13,6 +14,8 @@ body {
 .main__container {
   display: flex;
   flex-direction: column;
+  max-width: 1600px;
+  width: 100%;
 }
 
 // GENERAL//
@@ -27,10 +30,14 @@ $font-text: 'roboto';
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
+$fourth-color: #008766;
+$background-color: #F6F6F6;
+$grey-color : #7E7E7E;
 
 @import './_partials/header.scss';
 @import './_partials/main.scss';
 @import './_partials/restaurants.scss';
+@import './_partials/media-queries.scss';
 
 
 

@@ -11,6 +11,8 @@ body {
 .main__container {
   display: flex;
   flex-direction: column;
+  max-width: 1600px;
+  width: 100%;
 }
 
 header {
@@ -55,6 +57,11 @@ main {
   justify-content: center;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+}
+
 .location {
   background-color: #EAEAEA;
   height: 50px;
@@ -75,21 +82,17 @@ main {
   align-items: center;
   gap: 27px;
 }
-
-.exploration__title {
+.exploration .exploration__title {
   display: flex;
   text-align: center;
   align-items: center;
-  height: 68px;
   padding-left: 42px;
   padding-right: 58px;
 }
-
-.exploration__description {
+.exploration .exploration__description {
   display: flex;
   text-align: center;
   align-items: center;
-  height: 46px;
   padding-left: 34px;
   padding-right: 26px;
 }
@@ -105,11 +108,11 @@ main {
   justify-content: center;
   padding-left: 18.75px;
   padding-right: 18.75px;
-  transition: all 500ms;
+  transition: all 300ms;
 }
 .exploration__btn:hover {
   cursor: pointer;
-  filter: brightness(1.5);
+  filter: opacity(0.9);
   box-shadow: 0px 0px 20px -5px #7E7E7E;
 }
 .exploration__btn span {
@@ -120,7 +123,6 @@ main {
 }
 
 .fonctionnement {
-  height: 440px;
   padding-top: 48px;
   padding-bottom: 68px;
 }
@@ -131,7 +133,7 @@ main {
   padding-left: 20px;
   padding-bottom: 26px;
 }
-.fonctionnement .fonctionnement__box {
+.fonctionnement .fonctionnement__list {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -139,7 +141,7 @@ main {
   padding-left: 32.51px;
   padding-right: 20px;
 }
-.fonctionnement .fonctionnement__box .fonctionnement__box__rectangle {
+.fonctionnement .fonctionnement__list .fonctionnement__list__rectangle {
   display: flex;
   align-items: center;
   height: 72px;
@@ -149,13 +151,13 @@ main {
   gap: 27px;
   box-shadow: 0px 5px 15px -10px #7E7E7E;
 }
-.fonctionnement .fonctionnement__box .fonctionnement__box__rectangle span {
+.fonctionnement .fonctionnement__list .fonctionnement__list__rectangle span {
   font-family: "roboto";
   font-size: 16px;
   font-weight: 500;
 }
 
-.fonctionnement__box__ellipse {
+.fonctionnement__list__counter {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,7 +171,7 @@ main {
   font-weight: 500;
   margin: -11px;
 }
-.fonctionnement__box__ellipse .fa-solid {
+.fonctionnement__list__counter .fa-solid {
   color: #7E7E7E;
 }
 
@@ -194,7 +196,7 @@ footer {
 footer .footer__title {
   font-family: "shrikhand";
   color: white;
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 400;
 }
 footer .footer__link {
@@ -227,12 +229,14 @@ footer .footer__link a .fa-utensils, footer .footer__link a .fa-handshake-angle 
   font-family: "roboto";
   color: #000;
 }
-.restaurants .restaurants__title {
+
+.restaurants__title {
   padding-left: 20px;
   font-size: 24px;
   font-weight: 700;
 }
-.restaurants .restaurants__cards {
+
+.restaurants__cards {
   display: flex;
   flex-direction: column;
   padding-left: 17px;
@@ -241,17 +245,18 @@ footer .footer__link a .fa-utensils, footer .footer__link a .fa-handshake-angle 
   width: 100%;
   gap: 18px;
 }
-.restaurants .restaurants__cards .card {
+.restaurants__cards .card {
   height: 251px;
+  position: relative;
 }
-.restaurants .restaurants__cards .card .card__img {
+.restaurants__cards .card .card__img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   height: 66%;
   width: 100%;
   object-fit: cover;
 }
-.restaurants .restaurants__cards .card .card__content {
+.restaurants__cards .card .card__content {
   padding-left: 13px;
   padding-right: 25px;
   background-color: white;
@@ -263,18 +268,28 @@ footer .footer__link a .fa-utensils, footer .footer__link a .fa-handshake-angle 
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-.restaurants .restaurants__cards .card .card__content .card__txt {
+.restaurants__cards .card .card__content .card__txt {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.restaurants .restaurants__cards .card .card__content .card__txt .card__title {
+.restaurants__cards .card .card__content .card__txt .card__title {
   font-size: 18px;
   font-weight: 700;
 }
-.restaurants .restaurants__cards .card .card__content .card__txt .card__subtitle {
+.restaurants__cards .card .card__content .card__txt .card__subtitle {
   font-size: 17px;
   font-weight: 300;
+}
+.restaurants__cards .card .card__new--position {
+  position: absolute;
+  top: 13px;
+  right: 12px;
+}
+.restaurants__cards .card .card__heart--position {
+  position: absolute;
+  top: 205px;
+  right: 25px;
 }
 
 a {
@@ -282,18 +297,94 @@ a {
   color: black;
 }
 
-.card__heart {
+.card__new {
+  border-radius: 2px;
+  width: 80px;
+  height: 29px;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__new p {
+  text-align: center;
+  font-family: "roboto";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #008766;
+}
+
+.card__heart--animation {
   cursor: pointer;
 }
-.card__heart .fa-solid {
-  display: none;
+.card__heart--animation .fa-solid {
+  transition: all 300ms ease-in-out;
+  opacity: 0;
+}
+.card__heart--animation .fa-solid:hover {
   color: blue;
+  opacity: 1;
 }
-.card__heart .fa-solid:hover {
-  display: initial;
+
+.card__heart--position {
+  position: relative;
 }
-.card__heart .fa-regular:hover {
-  display: none;
+.card__heart--position .fa-solid {
+  position: absolute;
+}
+
+@media (min-width: 768px) {
+  .restaurants__cards {
+    gap: 50px;
+  }
+  .restaurants__title, .card {
+    margin: 0px 200px 0px 200px;
+  }
+  .fonctionnement {
+    margin: 0px 200px 0px 200px;
+  }
+}
+@media (min-width: 1024px) {
+  .main-container {
+    gap: 30px;
+  }
+  .exploration {
+    gap: 18px;
+  }
+  .fonctionnement {
+    padding: 50px 180px 50px 180px;
+  }
+  .fonctionnement .fonctionnement__box {
+    flex-direction: row;
+  }
+  .restaurants {
+    padding: 25px 180px 25px 180px;
+  }
+  .restaurants .restaurants__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 100px;
+    grid-row-gap: 50px;
+  }
+  .restaurants__title, .card {
+    margin: 0px;
+  }
+  .fonctionnement {
+    margin: 0px;
+  }
+  footer {
+    height: 114px;
+    padding: 30px 25px 30px 25px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 60px;
+  }
+  footer .footer__link {
+    flex-direction: row;
+    gap: 30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

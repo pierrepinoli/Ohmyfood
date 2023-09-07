@@ -1,0 +1,83 @@
+// GENERAL//
+
+// Variables police//
+
+$font-text: 'roboto';
+$font-title: 'shrikhand';
+
+// Variables couleurs//
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$background-color: #F6F6F6;
+$grey-color : #7E7E7E;
+
+// MEDIA QUERIES //
+@media (min-width: 768px) { 
+    .restaurants__cards {
+        gap:50px;
+    }
+
+  .restaurants__title, .card {
+    margin: 0px 200px 0px 200px;
+    }
+
+  .fonctionnement {
+    margin: 0px 200px 0px 200px; 
+    }  
+
+
+
+}
+
+
+
+@media (min-width: 1024px) { 
+    .main-container {
+        gap:30px;
+    }
+
+    .exploration {
+        gap:18px;
+    }
+
+    .fonctionnement { 
+        padding : 50px 180px 50px 180px;
+        .fonctionnement__box {
+            flex-direction: row;
+        }
+    }
+
+    .restaurants {
+        padding : 25px 180px 25px 180px;
+        .restaurants__cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 100px;
+            grid-row-gap: 50px;
+            }
+        
+    }
+
+    .restaurants__title, .card {
+    margin : 0px;
+   }
+
+   .fonctionnement {
+    margin: 0px; 
+    }  
+
+    footer {
+        height: 114px;
+        padding: 30px 25px 30px 25px;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        gap: 60px;
+        .footer__link {
+            flex-direction: row;
+            gap: 30px;
+
+        }
+    }
+}
