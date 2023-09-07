@@ -316,16 +316,23 @@ a {
   color: #008766;
 }
 
-.card__heart--animation {
+.card__heart--animation .fa-regular {
   cursor: pointer;
+  font-size: 25px;
 }
 .card__heart--animation .fa-solid {
-  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  font-size: 25px;
   opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
 }
 .card__heart--animation .fa-solid:hover {
-  color: blue;
   opacity: 1;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  transition: opacity 0.7s ease-in-out;
 }
 
 .card__heart--position {
