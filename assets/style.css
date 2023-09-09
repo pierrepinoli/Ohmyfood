@@ -363,7 +363,7 @@ a {
   .fonctionnement {
     padding: 50px 180px 50px 180px;
   }
-  .fonctionnement .fonctionnement__box {
+  .fonctionnement .fonctionnement__list {
     flex-direction: row;
   }
   .restaurants {

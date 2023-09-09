@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohmyfood</title>
+    <title>La palette du goût</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&family=Raleway:wght@100&family=Roboto:wght@100&family=Shrikhand&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="SASS/style.css">
+    <link rel="stylesheet" href="../assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -20,111 +20,155 @@
 
 <body>
     <div class="main__container">
-        <header>
-            <a href="index.html"><img src="assets/images/logo/ohmyfood.png" alt="Logo ohmyfood" class="logo"></a>
+        <header class="header__restaurants>
+            <a href=" ..index.html"></a>
+            <i class="fa-solid fa-arrow-right fa-rotate-180"></i>
+            <img src="../assets/images/logo/ohmyfood@2x.svg" alt="Logo ohmyfood" class="logo">
         </header>
 
         <main>
-            <section class="location">
-                <i class="fa-sharp fa-solid fa-location-dot"></i>
-                <p>Paris,Belleville</p>
-            </section>
-            <section class="exploration">
-                <h1>Réservez le menu qui vous convient</h1>
-                <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-                <button class="exploration__btn exploration__btn--color exploration__btn--shadow">
-                    <span>Explorer nos restaurants</span>
-                </button>
+            <section class="background-img">
 
+                <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                    alt="Un plat de la palette du goût">
             </section>
-            <section class="fonctionnement">
-                <h2>Fonctionnement</h2>
-                <div class="fonctionnement__box">
-                    <div class="fonctionnement__box__rectangle">
-                        <div class="fonctionnement__box__ellipse">1</div>
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                        <span>Choisissez un restaurant</span>
+            <div class="menu">
+                <section>
+                    <div class=menu__title>
+                        <h1>La palette du goût</h1>
+                        <div class="card__heart--animation card__heart--position">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
                     </div>
-                    <div class="fonctionnement__box__rectangle">
-                        <div class="fonctionnement__box__ellipse">2</div>
-                        <i class="fa-solid fa-list-ul"></i>
-                        <span>Composez votre menu</span>
-                    </div>
-                    <div class="fonctionnement__box__rectangle">
-                        <div class="fonctionnement__box__ellipse">3</div>
-                        <i class="fa-solid fa-store"></i>
-                        <span>Dégustez au restaurant</span>
-                    </div>
-                </div>
-            </section>
-            <section class="restaurants">
-                <div class="restaurants__title">
-                    <h2>Restaurants</h2>
-                </div>
-                <div class="restaurants__cards">
-                    <article class="card">
-                        <a href="#">
-                            <img src="restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                            <div class="card-content">
-                                <div class="card-txt">
-                                    <h3 class="card-title">la palette du goût</h3>
-                                    <p class="card-subtitle">Ménilmontant</p>
-                                </div>
-                                <div class="card-heart">
-                                    <i class="fa-regular fa-heart"></i>
+                </section>
 
-                                </div>
+                <!-------------- ENTREES ------------->
+
+                <section class="recipe">
+                    <h2>ENTREES</h2>
+                    <article class="card">
+                        <div class="card__content">
+                            <div class="card__txt">
+                                <h3 class="card__title">Fricassée d'escargots</h3>
+                                <p class="card__subtitle">Au piment d'Espelette</p>
                             </div>
-                        </a>
+                        </div>
                     </article>
                     <article class="card">
-                        <a href="#">
-                            <img src="restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="la note enchantée">
-                            <div class="card-content">
-                                <div class="card-txt">
-                                    <h3 class="card-title">la note enchantée</h3>
-                                    <p class="card-subtitle">Charonne</p>
-                                </div>
-                                <div class="card-heart">
-                                    <i class="fa-regular fa-heart"></i>
-
-                                </div>
+                        <div class="card__content">
+                            <div class="card__txt">
+                                <h3 class="card__title">Foie gras de canard mi-cuit</h3>
+                                <p class="card__subtitle">Et ses copeaux de truffe noire</p>
                             </div>
-                        </a>
+                        </div>
                     </article>
                     <article class="card">
-                        <a href="#">
-                            <img src="restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="a la francaise">
-                            <div class="card-content">
-                                <div class="card-txt">
-                                    <h3 class="card-title">a la francaise</h3>
-                                    <p class="card-subtitle">Cité rouge</p>
-                                </div>
-                                <div class="card-heart">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
+                        <div class="card__content">
+                            <div class="card__txt">
+                                <h3 class="card__title">Œuf au plat</h3>
+                                <p class="card__subtitle">Assaisonné à la truffe sur lit de caviar</p>
                             </div>
-                        </a>
+                        </div>
+                    </article>
+                </section>
+
+                <!-------------- PLATS -------------->
+
+                <section class="recipe">
+                    <h2>PLATS</h2>
+                    <article class="card">
+                        <div class="card__content">
+                            <div class="card__txt">
+                                <h3 class="card__title">Filet de bœuf aux herbes</h3>
+                                <p class="card__subtitle">Accompagné de sa ribambelle de légumes</p>
+                            </div>
+                        </div>
                     </article>
                     <article class="card">
-                        <a href="#">
-                            <img src="restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                                alt="le décile des sens">
-                            <div class="card-content">
-                                <div class="card-txt">
-                                    <h3 class="card-title">le delice des sens</h3>
-                                    <p class="card-subtitle">Folie-Méricourt</p>
-                                </div>
-                                <div class="card-heart">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
+                        <div class="card__content">
+                            <div class="card__txt">
+                                <h3 class="card__title">Parmentier de queue de bœuf</h3>
+                                <p class="card__subtitle">À la truffe noire sur sa purée de panais</p>
                             </div>
-                        </a>
+                        </div>
                     </article>
-                </div>
+                    <article class="card">
+                        <div class="card__content">
+                            <div class="card__txt">
+                                <h3 class="card__title">Filet de turbot</h3>
+                                <p class="card__subtitle">Aux agrumes</p>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section class="recipe">
+                    <h2>DESSERTS</h2>
+                    <article class="card">
+                        <div class="card__content">
+                            <div class="card__txt">
+                                <h3 class="card__title">Fricassée d'escargots</h3>
+                                <p class="card__subtitle">Au piment d'Espelette</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__content">
+                            <div class="card__txt">
+                                <h3 class="card__title">Foie gras de canard mi-cuit</h3>
+                                <p class="card__subtitle">Et ses copeaux de truffe noire</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__content">
+                            <div class="card__txt">
+                                <h3 class="card__title">Œuf au plat</h3>
+                                <p class="card__subtitle">Assaisonné à la truffe sur lit de caviar</p>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <!--------------DESSERTS -------------->
+
+                <section class="recipe">
+                    <h2>DESSERTS</h2>
+                    <article class="card">
+                        <div class="card__content">
+                            <div class="card__txt">
+                                <h3 class="card__title">Paris-Brest</h3>
+                                <p class="card__subtitle">Revisité</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__content">
+                            <div class="card__txt">
+                                <h3 class="card__title">Macaron au chocolat d'exception </h3>
+                                <p class="card__subtitle">Et glace à la vanille de Madagascar</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__content">
+                            <div class="card__txt">
+                                <h3 class="card__title">Mousse au chocolat </h3>
+                                <p class="card__subtitle">Au piment d'Espelette et à la truffe noire</p>
+                            </div>
+                        </div>
+                    </article>
+                </section>
 
 
-            </section>
+                <!-- COMMANDER -->
+
+                <section>
+                    <a href="#">
+                        <button class="exploration__btn"><span>Commander</span></button>
+                    </a>
+                </section>
+            </div>
         </main>
 
         <footer>

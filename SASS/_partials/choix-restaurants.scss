@@ -1,0 +1,153 @@
+// GENERAL//
+
+// Variables police//
+
+$font-text: 'roboto';
+
+// Variables couleurs//
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$fourth-color: #008766;
+$background-color: #F6F6F6;
+$grey-color : #7E7E7E;
+
+.restaurants {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background-color: $background-color;
+    font-family: $font-text;
+    color: #000;
+}
+
+.restaurants__title {
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.restaurants__cards {
+    display: flex;
+    flex-direction: column;
+    padding-left: 17px;
+    padding-right: 18px;
+    border-radius: 15px;
+    width: 100%;
+    gap: 18px;
+
+    .card {
+        height: 251px;
+        position: relative;
+
+        .card__img {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: 66%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .card__content {
+            padding-left: 13px;
+            padding-right: 25px;
+            background-color: white;
+            height: 34%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+
+            .card__txt {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .card__title {
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+
+                .card__subtitle {
+                    font-size: 17px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .card__new--position {
+            position: absolute;
+            top: 13px;
+            right: 12px;
+        }
+
+        .card__heart--position {
+            position: absolute;
+            top: 205px;
+            right: 25px;
+
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.card__new {
+    border-radius: 2px;
+    width: 80px;
+    height: 29px;
+    background-color: $tertiary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        text-align: center;
+        font-family: $font-text;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        color: $fourth-color;
+    }
+}
+
+// ANIMATION HEART //
+
+.card__heart--animation {
+    
+    .fa-regular {
+        cursor: pointer;
+    font-size: 25px;
+    }
+    .fa-solid {
+        cursor: pointer;
+        font-size: 25px;    
+        // transition: all 300ms ease-in-out;
+        opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+        &:hover {
+            opacity: 1;
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    transition: opacity 0.7s ease-in-out;
+        }
+    }
+}
+
+.card__heart--position {
+    position: relative;
+    .fa-solid {
+        position: absolute
+    }
+}

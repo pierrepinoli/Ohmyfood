@@ -14,7 +14,7 @@ $background-color: #F6F6F6;
 $grey-color : #7E7E7E;
 
 // MEDIA QUERIES //
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     .restaurants__cards {
         gap:50px;
     }
@@ -24,7 +24,7 @@ $grey-color : #7E7E7E;
     }
 
   .fonctionnement {
-    margin: 0px 200px 0px 200px; 
+    margin: 0px 200px 0px 200px;
     }  
 
 
@@ -44,7 +44,7 @@ $grey-color : #7E7E7E;
 
     .fonctionnement { 
         padding : 50px 180px 50px 180px;
-        .fonctionnement__box {
+        .fonctionnement__list {
             flex-direction: row;
         }
     }
