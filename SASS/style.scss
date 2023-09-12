@@ -18,6 +18,33 @@ body {
   width: 100%;
 }
 
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fcf;
+  border-color: #fcf transparent #fcf transparent;
+  animation: lds-dual-ring 1.5s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
 // GENERAL//
 
 // Variables police//
@@ -37,8 +64,8 @@ $grey-color : #7E7E7E;
 @import './_partials/header.scss';
 @import './_partials/main.scss';
 @import './_partials/choix-restaurants.scss';
-@import './_partials/media-queries.scss';
 @import './_partials/pages-restaurants.scss';
+@import './_partials/media-queries.scss';
 
 
 
