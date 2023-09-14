@@ -408,11 +408,11 @@ a {
 }
 .recipe .card .card__content {
   width: 100%;
-  padding: 15px;
   display: flex;
   justify-content: space-between;
 }
 .recipe .card .card__content .card__txt {
+  padding: 15px;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -428,10 +428,37 @@ a {
 }
 .recipe .card .card__content .card__price {
   display: flex;
-  align-items: flex-end;
   font-family: "roboto";
   font-weight: 700;
   padding-left: 10px;
+}
+.recipe .card .card__content .card__price .card__price__number {
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+}
+
+.card .card__content .card__price .card__check {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+}
+.card .card__content .card__price .card__check .fa-check__background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 0px;
+  background-color: white;
+  border-radius: 20px;
+  opacity: 0;
+}
+.card .card__content .card__price .card__check .fa-check__background .fa-check {
+  color: #99E2D0;
+  opacity: 0;
 }
 
 .command {
@@ -653,51 +680,28 @@ a {
     opacity: 1;
   }
 }
-.card .card__check {
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #99E2D0;
-}
-.card .card__check .fa-check__background {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 25px;
-  width: 0px;
-  background-color: white;
-  border-radius: 20px;
-  opacity: 0;
-}
-.card .card__check .fa-check__background .fa-check {
-  color: #99E2D0;
-  opacity: 0;
-}
-
-.card:hover .card__check {
+.card:hover .card__content .card__price .card__check {
   animation: animation-check 300ms ease-in-out;
   animation-fill-mode: forwards;
 }
-.card:hover .card__check .fa-check__background {
+.card:hover .card__content .card__price .card__check .fa-check__background {
   animation: animation-fa-check-background 300ms ease-in-out;
   animation-fill-mode: forwards;
 }
-.card:hover .card__check .fa-check__background .fa-check {
+.card:hover .card__content .card__price .card__check .fa-check__background .fa-check {
   animation: animation-fa-check 300ms ease-in-out;
   animation-fill-mode: forwards;
 }
 
-.card:not(:hover) .card__check {
+.card:not(:hover) .card__content .card__price .card__check {
   animation: animation-check-reverse 300ms ease-in-out;
   animation-fill-mode: forwards;
 }
-.card:not(:hover) .card__check .fa-check__background {
+.card:not(:hover) .card__content .card__price .card__check .fa-check__background {
   animation: animation-fa-check-background-reverse 300ms ease-in-out;
   animation-fill-mode: forwards;
 }
-.card:not(:hover) .card__check .fa-check__background .fa-check {
+.card:not(:hover) .card__content .card__price .card__check .fa-check__background .fa-check {
   animation: animation-fa-check-reverse 300ms ease-in-out;
   animation-fill-mode: forwards;
 }

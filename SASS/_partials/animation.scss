@@ -164,66 +164,44 @@ $grey-color : #7E7E7E;
 
 // ****** ANIMATION CHECK ********//
 
-.card {
-    .card__check {
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $tertiary-color;
-        .fa-check__background {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 25px;
-            width: 0px;
-            background-color: white;
-            border-radius: 20px;
-            opacity: 0;
-            .fa-check {
-            color: $tertiary-color;
-            opacity: 0;
-            }
-        }
-    }
- 
-}
 
-
-
-.card:hover {      
-    .card__check {
-        animation: animation-check 300ms ease-in-out;
-        animation-fill-mode: forwards;
-            .fa-check__background {
-                animation: animation-fa-check-background 300ms ease-in-out;
+.card:hover {
+    .card__content {
+        .card__price {
+            .card__check {
+                animation: animation-check 300ms ease-in-out;
                 animation-fill-mode: forwards;
-                    .fa-check {
-                        animation :animation-fa-check 300ms ease-in-out;
+                    .fa-check__background {
+                        animation: animation-fa-check-background 300ms ease-in-out;
                         animation-fill-mode: forwards;
+                            .fa-check {
+                                animation :animation-fa-check 300ms ease-in-out;
+                                animation-fill-mode: forwards;
+                            }
                     }
             }
-    }
-    // .card__content {
-    //     .card__price {
-    //         transform : translateX(-70px);
-    //     }
-    // }
-}
+
+        }
+    }      
+    
+}   
 
 .card:not(:hover) {
-    .card__check {
-        animation: animation-check-reverse 300ms ease-in-out;
-        animation-fill-mode: forwards;
-            .fa-check__background {
-                animation: animation-fa-check-background-reverse 300ms ease-in-out;
+    .card__content {
+        .card__price {
+            .card__check {
+                animation: animation-check-reverse 300ms ease-in-out;
                 animation-fill-mode: forwards;
-                    .fa-check {
-                        animation :animation-fa-check-reverse 300ms ease-in-out;
+                    .fa-check__background {
+                        animation: animation-fa-check-background-reverse 300ms ease-in-out;
                         animation-fill-mode: forwards;
-                    }
+                            .fa-check {
+                                animation :animation-fa-check-reverse 300ms ease-in-out;
+                                animation-fill-mode: forwards;
+                            }
+                }
             }
+        }
     }
 }
 
@@ -344,3 +322,4 @@ $grey-color : #7E7E7E;
         width: auto;
     }
 }
+

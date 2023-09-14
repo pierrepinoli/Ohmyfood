@@ -103,10 +103,10 @@ $grey-color : #7E7E7E;
         opacity: 0;
         .card__content {
             width: 100%;
-            padding: 15px;
             display: flex;
             justify-content: space-between;
             .card__txt {
+                padding: 15px;
                 white-space: nowrap;
                 overflow: hidden;
                 .card__title {
@@ -122,10 +122,14 @@ $grey-color : #7E7E7E;
             }
             .card__price {
                 display: flex;
-                align-items: flex-end;
                 font-family: $font-text;
                 font-weight: 700;
                 padding-left: 10px;
+                .card__price__number {
+                    display: flex;
+                    align-items: flex-end;
+                    padding: 15px;
+                }
             }
         }
     
@@ -133,6 +137,35 @@ $grey-color : #7E7E7E;
     }
 }  
 
+.card {
+    .card__content {
+        .card__price {
+            .card__check {
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $tertiary-color;
+               
+                .fa-check__background {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 25px;
+                    width: 0px;
+                    background-color: white;
+                    border-radius: 20px;
+                    opacity: 0;
+                    .fa-check {
+                    color: $tertiary-color;
+                    opacity: 0;
+                    }
+                }
+    }
+}
+}
+}
 
 
 
