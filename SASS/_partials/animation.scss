@@ -51,7 +51,7 @@ $grey-color : #7E7E7E;
       opacity : 1;
     }
     50% {
-      opacity : 0.8;
+      opacity : 0.5;
     }
     100% {
       opacity : 0;
@@ -95,6 +95,11 @@ $grey-color : #7E7E7E;
 
 // ANIMATION PLATS MENU //
 
+.recipe__title, .recipe__line {
+    animation: reveal-card 0.5s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
 .card {
     animation: reveal-card 0.5s ease-in-out;
     animation-iteration-count: 1;
@@ -102,6 +107,9 @@ $grey-color : #7E7E7E;
 }
 
 .recipe:nth-child(2) {
+    .recipe__title, .recipe__line {
+        animation-delay: 0s;
+    }
     .card:nth-child(2) {
         animation-delay: 0s;
     } 
@@ -114,6 +122,9 @@ $grey-color : #7E7E7E;
 }
 
 .recipe:nth-child(3) {
+    .recipe__title, .recipe__line {
+        animation-delay: 0.9s;
+    }
     .card:nth-child(2) {
         animation-delay: 0.9s;
     } 
@@ -126,6 +137,9 @@ $grey-color : #7E7E7E;
 }
 
 .recipe:nth-child(4) {
+    .recipe__title, .recipe__line {
+        animation-delay: 1.8s;
+    }
     .card:nth-child(2) {
         animation-delay: 1.8s;
     } 
@@ -146,9 +160,9 @@ $grey-color : #7E7E7E;
  }
 }
 
-// ****************************** //
+
 // ****** ANIMATION CHECK ********//
-// ****************************** //
+
 
 .card__check {
     border-top-right-radius: 15px;

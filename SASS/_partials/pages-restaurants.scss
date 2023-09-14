@@ -14,14 +14,17 @@ $fourth-color: #008766;
 $background-color: #F6F6F6;
 $grey-color : #7E7E7E;
 
+
+
 .header__restaurants {
     display: flex;
     justify-content: center;
     align-items: center;
+    
     a {
+        font-size: 1.5em;
         position: absolute; left: 20px;
     }
-
 }
 
 .background-img {
@@ -62,11 +65,13 @@ $grey-color : #7E7E7E;
     flex-direction: column;
     gap : 12px;
     width: 100%;
+    
     .recipe__title {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: 10px;
+        opacity: 0;
         h2 {
             font-family: $font-text;
             font-size: 16px;
@@ -75,6 +80,7 @@ $grey-color : #7E7E7E;
             line-height: normal;
         }
         .recipe__line {
+            opacity: 0;
             width: 40px;
             height: 3px;
             background-color: $tertiary-color;
@@ -82,10 +88,10 @@ $grey-color : #7E7E7E;
     }
     .card {
         display: flex;
-        opacity: 0;
         background-color: white;
         border-radius: 15px;
         box-shadow: 0px 5px 15px -10px $grey-color;
+        opacity: 0;
         .card__content {
             width: 100%;
             padding: 15px;

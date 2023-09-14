@@ -6,6 +6,7 @@
 body {
   display: flex;
   justify-content: center;
+  min-width: 300px;
 }
 
 .main__container {
@@ -13,12 +14,6 @@ body {
   flex-direction: column;
   max-width: 1600px;
   width: 100%;
-}
-
-.card__title, .card__subtitle {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 header {
@@ -330,6 +325,7 @@ a {
   align-items: center;
 }
 .header__restaurants a {
+  font-size: 1.5em;
   position: absolute;
   left: 20px;
 }
@@ -378,6 +374,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
+  opacity: 0;
 }
 .recipe .recipe__title h2 {
   font-family: "roboto";
@@ -387,16 +384,17 @@ a {
   line-height: normal;
 }
 .recipe .recipe__title .recipe__line {
+  opacity: 0;
   width: 40px;
   height: 3px;
   background-color: #99E2D0;
 }
 .recipe .card {
   display: flex;
-  opacity: 0;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 5px 15px -10px #7E7E7E;
+  opacity: 0;
 }
 .recipe .card .card__content {
   width: 100%;
@@ -454,6 +452,10 @@ a {
   }
 }
 @media (min-width: 1024px) {
+  .header__restaurants a {
+    position: absolute;
+    left: 200px;
+  }
   .main-container {
     gap: 30px;
   }
@@ -534,7 +536,7 @@ a {
     opacity: 1;
   }
   50% {
-    opacity: 0.8;
+    opacity: 0.5;
   }
   100% {
     opacity: 0;
@@ -568,12 +570,21 @@ a {
   transition: opacity 0.7s ease-in-out;
 }
 
+.recipe__title, .recipe__line {
+  animation: reveal-card 0.5s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
 .card {
   animation: reveal-card 0.5s ease-in-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
+.recipe:nth-child(2) .recipe__title, .recipe:nth-child(2) .recipe__line {
+  animation-delay: 0s;
+}
 .recipe:nth-child(2) .card:nth-child(2) {
   animation-delay: 0s;
 }
@@ -584,6 +595,9 @@ a {
   animation-delay: 0.6s;
 }
 
+.recipe:nth-child(3) .recipe__title, .recipe:nth-child(3) .recipe__line {
+  animation-delay: 0.9s;
+}
 .recipe:nth-child(3) .card:nth-child(2) {
   animation-delay: 0.9s;
 }
@@ -594,6 +608,9 @@ a {
   animation-delay: 1.5s;
 }
 
+.recipe:nth-child(4) .recipe__title, .recipe:nth-child(4) .recipe__line {
+  animation-delay: 1.8s;
+}
 .recipe:nth-child(4) .card:nth-child(2) {
   animation-delay: 1.8s;
 }

@@ -26,6 +26,7 @@ $grey-color : #7E7E7E;
 body {
   display: flex;
   justify-content: center;
+  min-width: 300px;
 }
 
 .main__container {
@@ -33,14 +34,15 @@ body {
   flex-direction: column;
   max-width: 1600px;
   width: 100%;
+  
 }
 
-.card__title, .card__subtitle {
-  white-space: nowrap;
-  overflow: hidden;    
-  text-overflow: ellipsis;
-  // max-width: 300px;
-}
+// // .card__title, .card__subtitle {
+// //   white-space: nowrap;
+// //   overflow: hidden;    
+// //   text-overflow: ellipsis;
+//   // max-width: 300px;
+// }
 
 // Imports //
 
