@@ -15,12 +15,22 @@ $background-color: #F6F6F6;
 $grey-color : #7E7E7E;
 
 
+.card__content { 
+    .card__txt {
+      white-space: nowrap;
+      overflow: hidden;
+        .card__title, 
+        .card__subtitle {
+          overflow: hidden; 
+          text-overflow: ellipsis;
+        }   
+    }  
+}
 
 .header__restaurants {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     a {
         font-size: 1.5em;
         position: absolute; left: 20px;
@@ -65,7 +75,6 @@ $grey-color : #7E7E7E;
     flex-direction: column;
     gap : 12px;
     width: 100%;
-    
     .recipe__title {
         display: flex;
         flex-direction: column;
@@ -98,16 +107,25 @@ $grey-color : #7E7E7E;
             display: flex;
             justify-content: space-between;
             .card__txt {
+                white-space: nowrap;
+                overflow: hidden;
                 .card__title {
                     font-family: $font-text;
                     font-weight: 700;
-                }
+                    overflow: hidden; 
+                    text-overflow: ellipsis;
+                }    
+                .card__subtitle {
+                    overflow: hidden; 
+                    text-overflow: ellipsis;
+                    }  
             }
             .card__price {
                 display: flex;
                 align-items: flex-end;
                 font-family: $font-text;
                 font-weight: 700;
+                padding-left: 10px;
             }
         }
     
