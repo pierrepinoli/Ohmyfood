@@ -2,8 +2,8 @@
 
 // Variables police//
 
-$font-title: 'shrikhand';
 $font-text: 'roboto';
+$font-title: 'shrikhand';
 
 // Variables couleurs//
 
@@ -11,8 +11,13 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $fourth-color: #008766;
+
 $background-color: #F6F6F6;
-$grey-color : #7E7E7E;
+$background-footer-color: #353535;
+$backgroud-location-color: #EAEAEA;
+$grey-color: #7E7E7E;
+
+$txt-white-color: #FFFFFF;
 
 // Loader Spinner //
 
@@ -20,87 +25,98 @@ $grey-color : #7E7E7E;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color : $grey-color;
-    opacity : 1;
+    background-color: $grey-color;
+    opacity: 1;
     width: 100%;
     height: 100%;
-    position: fixed; top: 0px; left: 0px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
     z-index: 1000;
-    animation : lds 2s cubic-bezier(0,.9,.46,.33); 
+    animation: lds 2s cubic-bezier(0, .9, .46, .33);
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+
     .lds__dual-ring {
-      display: inline-block;
-      width: 80px;
-      height: 80px;
+        display: inline-block;
+        width: 80px;
+        height: 80px;
     }
+
     .lds__dual-ring:after {
-      content: " ";
-      display: block;
-      width: 64px;
-      height: 64px;
-      margin: 8px;
-      border-radius: 50%;
-      border: 6px solid $primary-color;
-      border-color: $primary-color transparent $primary-color transparent;
-      animation: lds-dual-ring 1.5s linear infinite;
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid $primary-color;
+        border-color: $primary-color transparent $primary-color transparent;
+        animation: lds-dual-ring 1.5s linear;
     }
-  }
-  
-  @keyframes lds {
+}
+
+@keyframes lds {
     0% {
-      opacity : 1;
+        opacity: 1;
     }
+
     50% {
-      opacity : 0.5;
+        opacity: 1;
     }
+
     100% {
-      opacity : 0;
-      display: none;
+        opacity: 0;
+        display: none;
     }
-  }
-  
-  @keyframes lds-dual-ring {
+}
+
+@keyframes lds-dual-ring {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
+}
+
 // ANIMATION HEART //
 
 .card__heart--animation {
-    
+
     .fa-regular {
         cursor: pointer;
-    font-size: 25px;
+        font-size: 25px;
     }
+
     .fa-solid {
         cursor: pointer;
-        font-size: 25px;    
+        font-size: 25px;
         // transition: all 300ms ease-in-out;
         opacity: 0;
-    transition: opacity 0.7s ease-in-out;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(#FF79DA, #9356DC);
-    -webkit-background-clip: text;
+        transition: opacity 0.7s ease-in-out;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(#FF79DA, #9356DC);
+        -webkit-background-clip: text;
+
         &:hover {
             opacity: 1;
-    background-image: linear-gradient(#FF79DA, #9356DC);
-    transition: opacity 0.7s ease-in-out;
+            background-image: linear-gradient(#FF79DA, #9356DC);
+            transition: opacity 0.7s ease-in-out;
         }
     }
 }
 
 // ANIMATION PLATS MENU //
 
-.recipe__title, .recipe__line {
+.recipe__title,
+.recipe__line {
     animation: reveal-card 0.5s ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+
 .card {
     animation: reveal-card 0.5s ease-in-out;
     animation-iteration-count: 1;
@@ -108,62 +124,80 @@ $grey-color : #7E7E7E;
 }
 
 .recipe:nth-child(2) {
-    .recipe__title, .recipe__line {
+
+    .recipe__title,
+    .recipe__line {
         animation-delay: 0s;
     }
+
     .card:nth-child(2) {
         animation-delay: 0s;
-    } 
+    }
+
     .card:nth-child(3) {
-        animation-delay: 0.3s;
-    } 
+        animation-delay: 0.25s;
+    }
+
     .card:nth-child(4) {
-        animation-delay: 0.6s;
+        animation-delay: 0.5s;
+    }
+
+    .card:nth-child(5) {
+        animation-delay: 0.75s;
     }
 }
 
 .recipe:nth-child(3) {
-    .recipe__title, .recipe__line {
-        animation-delay: 0.9s;
+
+    .recipe__title,
+    .recipe__line {
+        animation-delay: 1s;
     }
+
     .card:nth-child(2) {
-        animation-delay: 0.9s;
-    } 
+        animation-delay: 1s;
+    }
+
     .card:nth-child(3) {
-        animation-delay: 1.2s;
-    } 
+        animation-delay: 1.25s;
+    }
+
     .card:nth-child(4) {
-        animation-delay: 1.5s;
+        animation-delay: 1.75s;
     }
 }
 
 .recipe:nth-child(4) {
-    .recipe__title, .recipe__line {
-        animation-delay: 1.8s;
+
+    .recipe__title,
+    .recipe__line {
+        animation-delay: 2s;
     }
+
     .card:nth-child(2) {
-        animation-delay: 1.8s;
-    } 
+        animation-delay: 2.25s;
+    }
+
     .card:nth-child(3) {
         animation-delay: 2.1s;
-    } 
+    }
+
     .card:nth-child(4) {
-        animation-delay: 2.4s;
+        animation-delay: 2.5s;
     }
 }
 
 @keyframes reveal-card {
- 0% {
-    opacity: 0;
- }
- 100% {
-    opacity: 1;
- }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
-
 // ****** ANIMATION CHECK ********//
-
 
 .card:hover {
     .card__content {
@@ -171,20 +205,22 @@ $grey-color : #7E7E7E;
             .card__check {
                 animation: animation-check 300ms ease-in-out;
                 animation-fill-mode: forwards;
-                    .fa-check__background {
-                        animation: animation-fa-check-background 300ms ease-in-out;
+
+                .fa-check__background {
+                    animation: animation-fa-check-background 300ms ease-in-out;
+                    animation-fill-mode: forwards;
+
+                    .fa-check {
+                        animation: animation-fa-check 300ms ease-in-out;
                         animation-fill-mode: forwards;
-                            .fa-check {
-                                animation :animation-fa-check 300ms ease-in-out;
-                                animation-fill-mode: forwards;
-                            }
                     }
+                }
             }
 
         }
-    }      
-    
-}   
+    }
+
+}
 
 .card:not(:hover) {
     .card__content {
@@ -192,13 +228,15 @@ $grey-color : #7E7E7E;
             .card__check {
                 animation: animation-check-reverse 300ms ease-in-out;
                 animation-fill-mode: forwards;
-                    .fa-check__background {
-                        animation: animation-fa-check-background-reverse 300ms ease-in-out;
+
+                .fa-check__background {
+                    animation: animation-fa-check-background-reverse 300ms ease-in-out;
+                    animation-fill-mode: forwards;
+
+                    .fa-check {
+                        animation: animation-fa-check-reverse 300ms ease-in-out;
                         animation-fill-mode: forwards;
-                            .fa-check {
-                                animation :animation-fa-check-reverse 300ms ease-in-out;
-                                animation-fill-mode: forwards;
-                            }
+                    }
                 }
             }
         }
@@ -209,71 +247,83 @@ $grey-color : #7E7E7E;
 // ****keyframes ****//
 
 @keyframes animation-check {
-    0% { 
+    0% {
         width: 0px;
     }
+
     33% {
         width: 25px
     }
+
     66% {
-        width : 46px;
+        width: 46px;
     }
-    100% { 
-        width : 70px;
+
+    100% {
+        width: 70px;
     }
 }
 
 @keyframes animation-check-reverse {
-    0% { 
+    0% {
         width: 70px;
     }
+
     33% {
         width: 46px
     }
+
     66% {
-        width : 25px;
+        width: 25px;
     }
-    100% { 
-        width : 0px;
+
+    100% {
+        width: 0px;
     }
 }
 
 // *******************************//
 
 @keyframes animation-fa-check-background {
-    0% { 
+    0% {
         width: 0px;
-        
+
     }
+
     33% {
         width: 25px;
         opacity: 1;
     }
+
     66% {
-        width : 25px;
+        width: 25px;
         opacity: 1;
     }
-    100% { 
-        width : 25px;
+
+    100% {
+        width: 25px;
         opacity: 1;
     }
 }
 
 @keyframes animation-fa-check-background-reverse {
-    0% { 
-        opacity : 1;
+    0% {
+        opacity: 1;
         width: 25px;
     }
+
     33% {
-        opacity : 1;
+        opacity: 1;
         width: 25px;
-        
+
     }
-    66% { 
+
+    66% {
         width: 25px;
         opacity: 1;
     }
-    100% { 
+
+    100% {
         width: 0px;
     }
 }
@@ -281,45 +331,77 @@ $grey-color : #7E7E7E;
 // ********************************//
 
 @keyframes animation-fa-check {
-    0% { 
+    0% {
         opacity: 0;
         width: auto;
     }
+
     33% {
-        opacity : 0.5;
+        opacity: 0.5;
         width: auto;
         transform: rotate(135deg);
     }
-    50% { 
-        opacity : 0.8;
+
+    50% {
+        opacity: 0.8;
         width: auto;
-        
+
     }
-    100% { 
-        opacity : 1;
+
+    100% {
+        opacity: 1;
         width: auto;
         transform: rotate(0deg);
     }
 }
 
 @keyframes animation-fa-check-reverse {
-    0% { 
-        opacity : 1;
+    0% {
+        opacity: 1;
         width: auto;
         transform: rotate(0deg);
     }
+
     50% {
-        opacity : 0.8;
+        opacity: 0.8;
         width: auto;
     }
-    66% { 
-        opacity : 0.5;
+
+    66% {
+        opacity: 0.5;
         width: auto;
         transform: rotate(135deg);
     }
-    100% { 
+
+    100% {
         opacity: 0;
         width: auto;
     }
 }
 
+// arrow animation //
+
+.header__restaurants {
+    a:hover {
+        .fa-arrow-right {
+            rotate: 180deg;
+            animation: fa-arrow-pulse 1s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes fa-arrow-pulse {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+      }
+  }
+
+  

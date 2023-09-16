@@ -3,6 +3,7 @@
 // Variables police//
 
 $font-text: 'roboto';
+$font-title: 'shrikhand';
 
 // Variables couleurs//
 
@@ -10,8 +11,13 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $fourth-color: #008766;
+
 $background-color: #F6F6F6;
-$grey-color : #7E7E7E;
+$background-footer-color: #353535;
+$backgroud-location-color: #EAEAEA;
+$grey-color: #7E7E7E;
+
+$txt-white-color: #FFFFFF;
 
 .restaurants {
     padding-top: 60px;
@@ -124,6 +130,7 @@ a {
 
 .card__heart--position {
     position: relative;
+
     .fa-solid {
         position: absolute
     }

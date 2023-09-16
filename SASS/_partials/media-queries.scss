@@ -10,64 +10,83 @@ $font-title: 'shrikhand';
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
+$fourth-color: #008766;
+
 $background-color: #F6F6F6;
-$grey-color : #7E7E7E;
+$background-footer-color: #353535;
+$backgroud-location-color: #EAEAEA;
+$grey-color: #7E7E7E;
+
+$txt-white-color: #FFFFFF;
+
 
 // MEDIA QUERIES //
 @media (min-width: 768px) {
+    .menu {
+        padding: none;
+    }
+
     .restaurants__cards {
-        gap:50px;
+        gap: 50px;
     }
 
-  .restaurants__title, .card, .recipe__title {
-    margin: 0px 150px 0px 150px;
+    .restaurants__title,
+    .card,
+    .recipe__title {
+        margin: 0px 150px 0px 150px;
     }
 
-  .fonctionnement {
-    margin: 0px 200px 0px 200px;
-    }  
+    .fonctionnement {
+        margin: 0px 200px 0px 200px;
+    }
 }
 
 
-@media (min-width: 1024px) { 
+@media (min-width: 1024px) {
 
     .header__restaurants {
         a {
-            position: absolute; left: 200px;
+            position: absolute;
+            left: 200px;
         }
     }
+
     .main-container {
-        gap:30px;
+        gap: 30px;
     }
 
     .exploration {
-        gap:18px;
+        gap: 18px;
     }
 
-    .fonctionnement { 
-        padding : 50px 180px 50px 180px;
+    .fonctionnement {
+        padding: 50px 180px 50px 180px;
+
         .fonctionnement__list {
             flex-direction: row;
         }
     }
 
     .restaurants {
-        padding : 25px 180px 25px 180px;
+        padding: 25px 180px 25px 180px;
+
         .restaurants__cards {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-column-gap: 100px;
             grid-row-gap: 50px;
-            }
+        }
     }
 
-    .restaurants__title, .card, .recipe__title {
-    margin : 0px;
-   }
+    .restaurants__title,
+    .card,
+    .recipe__title {
+        margin: 0px;
+    }
 
-   .fonctionnement {
-    margin: 0px; 
-    }  
+    .fonctionnement {
+        margin: 0px;
+    }
 
     footer {
         height: 114px;
@@ -75,6 +94,7 @@ $grey-color : #7E7E7E;
         flex-direction: row-reverse;
         align-items: flex-end;
         gap: 60px;
+
         .footer__link {
             flex-direction: row;
             gap: 30px;
@@ -82,10 +102,10 @@ $grey-color : #7E7E7E;
     }
 
     .menu {
-        margin : 0px 150px;
+        margin: 0px 8%;
     }
-    
+
     .recipe {
-        padding: 0px 150px;
+        padding: 0px 20%;
     }
 }

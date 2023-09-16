@@ -10,9 +10,14 @@ $font-title: 'shrikhand';
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
-$background-color: #F6F6F6;
-$grey-color : #7E7E7E;
+$fourth-color: #008766;
 
+$background-color: #F6F6F6;
+$background-footer-color: #353535;
+$backgroud-location-color: #EAEAEA;
+$grey-color: #7E7E7E;
+
+$txt-white-color: #FFFFFF;
 
 h1 {
     font-family: $font-text;
@@ -38,22 +43,34 @@ p {
     line-height: normal;
 }
 
+
+
+header {
+    display: flex;
+    justify-content: center;
+    padding-top: 14px;
+    padding-bottom: 13px;
+}
+
+.logo {
+    width: 162px;
+    height: 44px;
+}
+
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-
-// FAIRE OMBRAGE LOCATION//
 .location {
-    background-color: #EAEAEA;
+    background-color: $backgroud-location-color;
     height: 50px;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     box-shadow: inset 0px 10px 10px -12px $grey-color;
-    gap : 17px;
+    gap: 17px;
 }
 
 .exploration {
@@ -65,21 +82,22 @@ main {
     justify-content: center;
     align-items: center;
     gap: 27px;
-        .exploration__title {
-            display: flex;
-            text-align: center;
-            align-items: center;
-            padding-left: 42px;
-            padding-right: 58px; 
-        }
-        .exploration__description {
-            display: flex;
-            text-align: center;
-            align-items: center;
-          
-            padding-left: 34px;
-            padding-right: 26px; 
-        }
+
+    .exploration__title {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        padding-left: 42px;
+        padding-right: 58px;
+    }
+
+    .exploration__description {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        padding-left: 34px;
+        padding-right: 26px;
+    }
 }
 
 .exploration__btn {
@@ -94,22 +112,25 @@ main {
     padding-left: 18.75px;
     padding-right: 18.75px;
     transition: all 300ms;
-        &:hover {
-            cursor: pointer;
-            filter: opacity(0.90);
-            box-shadow: 0px 0px 20px -5px $grey-color; 
-        }
-        span {
-            color: white;
-            font-family: $font-text;
-            font-size: 16px;
-            font-weight: 500; 
-        }
+
+    &:hover {
+        cursor: pointer;
+        filter: opacity(0.90);
+        box-shadow: 0px 0px 20px -5px $grey-color;
+    }
+
+    span {
+        color: $txt-white-color;
+        font-family: $font-text;
+        font-size: 16px;
+        font-weight: 500;
+    }
 }
 
 .fonctionnement {
     padding-top: 48px;
     padding-bottom: 68px;
+
     .fonctionnement__title {
         font-family: $font-text;
         font-size: 24px;
@@ -117,13 +138,15 @@ main {
         padding-left: 20px;
         padding-bottom: 26px;
     }
+
     .fonctionnement__list {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap : 25px;
+        gap: 25px;
         padding-left: 32.51px;
         padding-right: 20px;
+
         .fonctionnement__list__rectangle {
             display: flex;
             align-items: center;
@@ -133,11 +156,12 @@ main {
             background-color: $background-color;
             gap: 27px;
             box-shadow: 0px 5px 15px -10px $grey-color;
-                span {
-                    font-family: $font-text;
-                    font-size: 16px;
-                    font-weight: 500;
-                }    
+
+            span {
+                font-family: $font-text;
+                font-size: 16px;
+                font-weight: 500;
+            }
         }
     }
 }
@@ -150,56 +174,63 @@ main {
     width: 24px;
     border-radius: 50%;
     background-color: $primary-color;
-    color: white;
+    color: $txt-white-color;
     font-family: $font-text;
     font-size: 14.182px;
     font-weight: 500;
     margin: -11px;
-        .fa-solid {
-            color: $grey-color;
-        }
-}       
 
-.fa-mobile-screen-button, .fa-list-ul {
+    .fa-solid {
+        color: $grey-color;
+    }
+}
+
+.fa-mobile-screen-button,
+.fa-list-ul {
     color: $grey-color;
 }
 
 .fa-store {
-    color: $primary-color; 
+    color: $primary-color;
 }
 
 footer {
     display: flex;
     flex-direction: column;
-    background-color:#353535;
+    background-color: $background-footer-color;
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 22px;
     padding-top: 22px;
     gap: 16px;
+
     .footer__title {
         font-family: $font-title;
-        color: white;
+        color: $txt-white-color;
         font-size: 18px;
         font-weight: 400;
-    }  
+    }
+
     .footer__link {
         display: flex;
         flex-direction: column;
         list-style-type: none;
-        gap : 7px;
+        gap: 7px;
         padding: 0;
         margin: 0;
-            a {
+
+        a {
             display: flex;
             gap: 11px;
-            color : white;
+            color: $txt-white-color;
             font-family: $font-text;
             font-size: 16px;
-                .fa-utensils, .fa-handshake-angle {
-                    height: 13px;
-                    width: 11px;
-                }
+
+            .fa-utensils,
+            .fa-handshake-angle {
+                height: 13px;
+                width: 11px;
+            }
         }
-}
+    }
 }
