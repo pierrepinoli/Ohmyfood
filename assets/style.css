@@ -498,12 +498,11 @@ a {
     gap: 50px;
   }
   .restaurants__title,
-  .card,
-  .recipe__title {
-    margin: 0px 150px 0px 150px;
+  .card {
+    margin: 0px 15% 0px 15%;
   }
   .fonctionnement {
-    margin: 0px 200px 0px 200px;
+    margin: 0px 15% 0px 15%;
   }
 }
 @media (min-width: 1024px) {
@@ -518,18 +517,19 @@ a {
     gap: 18px;
   }
   .fonctionnement {
-    padding: 50px 180px 50px 180px;
+    padding: 50px 10% 50px 10%;
   }
   .fonctionnement .fonctionnement__list {
     flex-direction: row;
+    gap: 40px;
   }
   .restaurants {
-    padding: 25px 180px 25px 180px;
+    padding: 25px 10% 25px 10%;
   }
   .restaurants .restaurants__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 100px;
+    grid-column-gap: 10%;
     grid-row-gap: 50px;
   }
   .restaurants__title,
