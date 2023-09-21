@@ -21,6 +21,20 @@ $txt-white-color: #FFFFFF;
 
 
 // MEDIA QUERIES //
+@media (min-width: 370px) {
+    .recipe {
+        .card {
+            .card__content {
+                .card__txt {
+                    .card__title {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}    
+
 @media (min-width: 768px) {
     .menu {
         padding: 0;

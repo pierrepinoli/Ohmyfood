@@ -422,7 +422,7 @@ a {
   font-family: "roboto";
   font-weight: 700;
   overflow: hidden;
-  font-size: 17.5px;
+  font-size: 15px;
   text-overflow: ellipsis;
 }
 .recipe .card .card__content .card__txt .card__subtitle {
@@ -434,7 +434,6 @@ a {
   font-family: "roboto";
   font-weight: 700;
   font-size: 15px;
-  padding-left: 5px;
 }
 .recipe .card .card__content .card__price .card__price__number {
   display: flex;
@@ -492,6 +491,11 @@ a {
   font-weight: 500;
 }
 
+@media (min-width: 370px) {
+  .recipe .card .card__content .card__txt .card__title {
+    font-size: 17px;
+  }
+}
 @media (min-width: 768px) {
   .menu {
     padding: 0;
