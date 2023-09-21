@@ -35,6 +35,10 @@ $txt-white-color: #FFFFFF;
         margin: 0px 15% 0px 15%;
     }
 
+    .recipe__title {
+        padding: 0px 15%;
+    }
+
     .fonctionnement {
         margin: 0px 15% 0px 15%;
     }
@@ -82,6 +86,10 @@ $txt-white-color: #FFFFFF;
     .card,
     .recipe__title {
         margin: 0px;
+    }
+
+    .recipe__title {
+        padding: 0;
     }
 
     .fonctionnement {
